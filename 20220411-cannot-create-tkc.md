@@ -35,4 +35,4 @@ Supervisor Cluster works fine, but cannot create TKC
 登入至 HAProxy 修改 anyip-routes.cfg 中的 VIP 範圍
 指令： `vi /etc/vmware/anyip-routes.cfg`
 
-此錯誤訊息會發生於使用 HA Proxy 的環境，該部分並不受到 VMware Support，建議改用 NSX-ALB 來建置 vSphere with Tanzu 環境
+此錯誤訊息會發生於使用 HA Proxy 的環境，建議改採用 NSX-ALB 來建置 vSphere with Tanzu 環境
