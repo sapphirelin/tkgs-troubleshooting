@@ -1,0 +1,188 @@
+apiVersion: v1
+items:
+- apiVersion: run.tanzu.vmware.com/v1alpha2
+  kind: TanzuKubernetesCluster
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"run.tanzu.vmware.com/v1alpha2","kind":"TanzuKubernetesCluster","metadata":{"annotations":{},"name":"ns001-tkc","namespace":"ns        001"},"spec":{"topology":{"controlPlane":{"replicas":1,"storageClass":"kubernetes-storage-policy","tkr":{"reference":{"name":"v1.21.2---vmware.1-tkg.        1.ee25d55"}},"vmClass":"best-effort-small"},"nodePools":[{"name":"worker-nodepool-a1","replicas":1,"storageClass":"kubernetes-storage-policy","tkr":{        "reference":{"name":"v1.21.2---vmware.1-tkg.1.ee25d55"}},"vmClass":"best-effort-small"}]}}}
+    creationTimestamp: "2022-04-08T08:01:02Z"
+    finalizers:
+    - tanzukubernetescluster.run.tanzu.vmware.com
+    generation: 1
+    labels:
+      run.tanzu.vmware.com/tkr: v1.21.2---vmware.1-tkg.1.ee25d55
+    name: ns001-tkc
+    namespace: ns001
+    resourceVersion: "76853"
+    selfLink: /apis/run.tanzu.vmware.com/v1alpha2/namespaces/ns001/tanzukubernetesclusters/ns001-tkc
+    uid: 2fc8a955-f36d-429e-84c6-9495458f7d94
+  spec:
+    distribution:
+      fullVersion: v1.21.2+vmware.1-tkg.1.ee25d55
+      version: ""
+    settings:
+      network:
+        cni:
+          name: antrea
+        pods:
+          cidrBlocks:
+          - 192.168.0.0/16
+        serviceDomain: cluster.local
+        services:
+          cidrBlocks:
+          - 10.96.0.0/12
+        trust:
+          additionalTrustedCAs:
+          - data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUY4VENDQTltZ0F3SUJBZ0lVWlZRQXpWSndSVG5mSGhsQUFsU0dJVzZVVFpNd0RRWUpLb1pJaHZjTkFRRU4KQlFBd2J        qRUxNQWtHQTFVRUJoTUNWRmN4RHpBTkJnTlZCQWdNQmxSaGFYQmxhVEVPTUF3R0ExVUVCd3dGV2toUApUa2N4RGpBTUJnTlZCQW9NQlVaSlVsTlVNUXd3Q2dZRFZRUUxEQU5KVGxNeElEQWVCZ05W        QkFNTUYyaGhjbUp2CmNpNW1hWEp6ZEdsdWN5NWpiMjB1ZEhjZ01CNFhEVEl5TURRd09EQXhOVGd6TmxvWERUTXlNRFF3TlRBeE5UZ3oKTmxvd2JqRUxNQWtHQTFVRUJoTUNWRmN4RHpBTkJnTlZCQ        WdNQmxSaGFYQmxhVEVPTUF3R0ExVUVCd3dGV2toUApUa2N4RGpBTUJnTlZCQW9NQlVaSlVsTlVNUXd3Q2dZRFZRUUxEQU5KVGxNeElEQWVCZ05WQkFNTUYyaGhjbUp2CmNpNW1hWEp6ZEdsdWN5NW        piMjB1ZEhjZ01JSUNJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBZzhBTUlJQ0NnS0MKQWdFQXhZd2I5NXdqSkZjVUV6d1NtRHBSVTArbTlSWjdMUStLZHYvTWR1RFpLMXVQZFo3dUIyV0RFK0pTS1h        sYgo1QnNVQVYyVFRvRUxZbXgwVVdFVFVCdmdxSDh0QUFoSm9ISW9Pbkx6dmJ6Q3hXWFFLWGVvRkpkTElpb240L2F6Ci9zZGxjZHBMZWNhbW40cE1ZZmZRMzV2UXBGRk1xWHpsNlZiVlc5QUNXN0hx        aXYwRUdoRTNVV0h2Rll6bVh2L1MKa0xxZnVLbEJERVZ4MGM0ZE5YeGJLRVBhRWgvMThsQ3lHb0g2Smg5WVp3V1FKWnc1Y01rOUx3Rk5TYlRVR2ZxNgpLM2IrQmZGT2hFR3JvNTZYcWtzc1MzT3V6T        E5oQnQ5K1g2ekZWNVo4NXRNcTZ2YlB0VTZPWmhwYWMrQk12UEoyCjJhVGsrOEF3Uk1QWkZURXdRZy9qSGQ1NHJmWTZUT0hlY25HbHUrQmVYNllEY3dvR2Y5UDNyNHY0dzBNUEl2ZzMKQmtDT21wRD        hER2ptOVdvL1orc09NK210aHExL0JiU0hhUGVZUWc3WG5rREJyeThmeGpZdXJrOXVTWmJZN0xSbgoxRC91T1RHOHU5bEtST2tIWWpDc0N0akI3c0RoVzk4dUxERWQwd1RlalNLVzFMamxGWlpQMml        jZW9BcGlCanFNCkt4d2VXK3lseWZ0VC81Q1A0eHJmZ1c3dkRiSWNKdHZBRlk1MXpmMDNCOExVM0NyaGhFZzBSR1V4U1ZyZjdLSHgKclFVMEc2Q2p4T0NldU1vcnBXSTZIV2I3UHpETFNNQlQ1L3RY        RGE5Tk9zY2pKRVNMc21iaTRMWkd1QlEwbmQwbwpSUXlTZGFZRjlrQ0pHM2txMVVGUzNFdHBKNTJuRXNmdmpYaHhqeGQzVzlRZ1lUY0NBd0VBQWFPQmhqQ0JnekFmCkJnTlZIU01FR0RBV2dCUTZmT        EEyZDVJelR2YW9ldEFvVlkrcVFQQ1RuekFKQmdOVkhSTUVBakFBTUFzR0ExVWQKRHdRRUF3SUU4REFUQmdOVkhTVUVEREFLQmdnckJnRUZCUWNEQVRBekJnTlZIUkVFTERBcWdnOW1hWEp6ZEdsdQ        pjeTVqYjIwdWRIZUNFU291Wm1seWMzUnBibk11WTI5dExuUjNod1RBcU5MVE1BMEdDU3FHU0liM0RRRUJEUVVBCkE0SUNBUUFFdWpzZDBFNVRKdjI3Yk91T3dhMTNSTXVXOEhnV05hVS9URGlIamp        GUDl2QjRjaE9ZME5HaVBkSXkKOVZGUkVSaHpScHZjYTRCazVwOG5mNS9xNEw5WmVnWjl5eENJdXIzeE1NMWNvZnUyTXNNN3JkZ20yK2dMWWExUApkckM0Z1orMXJCc0NhcFkzTDQvU1FHTEVveUwx        WkZWNXRhSmpzZWJHTmRxUTV5UzdUdUxtQldTa09USE9wMDV5CmVlT1RNYkZEbHVHZUlhanh6endoSDJ3QVEvc3RlbzRtZXlBTTFMaWphcTRhelhnUy8ra2RYWmhXR216Mm5Pb2UKRWpzL2hrYm8rb        zI3dGVrQWJrSkcvQ01IVHF1Y09Rd09NYXllRkYwMHFFUFZ0N2hFRldOU0s3ZGE2b0N3UkNNNAp2UnVqcmZRaW04SVlidmNBVFB2ZUJNL2V6WlFmYlJXbjdsajIvT211OVJMbGdwbCt5YmV3WS9pSV        dhYW5IVzEzCmxjUTFnbHF3US8xdjNscjh0eDNXdUVVQkxOSFpqRUh1M0dNdVA2MmovM0pjY3hGR1pkOEs2T1E4TVlDdVBmSDYKaFRoNTZweERha1BNYVRJZTNaUWxhS0M4VGh0TFhZT2IzTUtKK29        rVXRsYUQ5bU8yODlWV2xYcVR6NmtPRE12aQpDL1NzemNDc1doZEdlZDlib1huQVUrOHJjUzg0cWFTeWNiV2Ewa0lpMW1kMmk2WlZUbmVUbG9wQ0crbUtpQkdiClVtT3dEMUxOQXFSZklxblhzODVn        Mmw3UXMxNGNMQlJkY2dFRjJwQ0dXNGk3WlZqekxZYXpwWkNQK1ZJSmNzSlMKTXdhd3J6SkhJRVYwdndkc0liT3ZpSDdQMEg2MzZxLzFjWEhHbmxCZStOUU5mazJuRWc9PQotLS0tLUVORCBDRVJUS        UZJQ0FURS0tLS0tCg==
+            name: harbor.firstins.com.tw
+    topology:
+      controlPlane:
+        replicas: 1
+        storageClass: kubernetes-storage-policy
+        tkr:
+          reference:
+            name: v1.21.2---vmware.1-tkg.1.ee25d55
+        vmClass: best-effort-small
+      nodePools:
+      - name: worker-nodepool-a1
+        replicas: 1
+        storageClass: kubernetes-storage-policy
+        tkr:
+          reference:
+            name: v1.21.2---vmware.1-tkg.1.ee25d55
+        vmClass: best-effort-small
+  status:
+    addons:
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:26Z"
+        message: 'unable to reconcile kubeadm ConfigMap''s CoreDNS info: unable to
+          retrieve kubeadm Configmap from the guest cluster: configmaps "kubeadm-config"
+          not found'
+        reason: ProvisioningFailed
+        severity: Warning
+        status: "False"
+        type: Provisioned
+      name: ""
+      type: DNS
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:35Z"
+        status: "True"
+        type: Provisioned
+      name: antrea
+      type: CNI
+      version: v0.13.5_vmware.4
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:37Z"
+        status: "True"
+        type: Provisioned
+      name: pvcsi
+      type: CSI
+      version: v2.3.0
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:36Z"
+        status: "True"
+        type: Provisioned
+      name: vmware-guest-cluster
+      type: CPI
+      version: v1.21.0_vmware.1
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:46Z"
+        status: "True"
+        type: Provisioned
+      name: authsvc
+      type: AuthService
+      version: 0.1-71-g64e1c73
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:26Z"
+        message: 'unable to retrieve kube-proxy daemonset from the guest cluster:
+          daemonsets.apps "kube-proxy" not found'
+        reason: ProvisioningFailed
+        severity: Warning
+        status: "False"
+        type: Provisioned
+      name: ""
+      type: Proxy
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:25Z"
+        status: "True"
+        type: Provisioned
+      name: defaultpsp
+      type: PSP
+      version: v1.21.2+vmware.1-tkg.1.ee25d55
+    - conditions:
+      - lastTransitionTime: "2022-04-08T08:03:37Z"
+        status: "True"
+        type: Provisioned
+      name: metrics-server
+      type: MetricsServer
+      version: v0.4.0+vmware.1
+    apiEndpoints:
+    - host: 192.168.160.167
+      port: 6443
+    conditions:
+    - lastTransitionTime: "2022-04-08T08:03:46Z"
+      message: "2 errors occurred:\n\t* failed to configure DNS for /, Kind= ns001/ns001-tkc:
+        unable to reconcile kubeadm ConfigMap's CoreDNS info: unable to retrieve kubeadm
+        Configmap from the guest cluster: configmaps \"kubeadm-config\" not found\n\t*
+        failed to configure kube-proxy for /, Kind= ns001/ns001-tkc: unable to retrieve
+        kube-proxy daemonset from the guest cluster: daemonsets.apps \"kube-proxy\"
+        not found\n\n"
+      reason: AddonsReconciliationFailed
+      severity: Warning
+      status: "False"
+      type: Ready
+    - lastTransitionTime: "2022-04-08T08:03:46Z"
+      message: "2 errors occurred:\n\t* failed to configure DNS for /, Kind= ns001/ns001-tkc:
+        unable to reconcile kubeadm ConfigMap's CoreDNS info: unable to retrieve kubeadm
+        Configmap from the guest cluster: configmaps \"kubeadm-config\" not found\n\t*
+        failed to configure kube-proxy for /, Kind= ns001/ns001-tkc: unable to retrieve
+        kube-proxy daemonset from the guest cluster: daemonsets.apps \"kube-proxy\"
+        not found\n\n"
+      reason: AddonsReconciliationFailed
+      severity: Warning
+      status: "False"
+      type: AddonsReady
+    - lastTransitionTime: "2022-04-08T08:03:27Z"
+      reason: WaitingForKubeadmInit
+      severity: Info
+      status: "False"
+      type: ControlPlaneReady
+    - lastTransitionTime: "2022-04-08T08:01:23Z"
+      message: node pools [] are unknown, [] are failed, [worker-nodepool-a1] are
+        updating
+      reason: NodePoolsUpdating
+      severity: Info
+      status: "False"
+      type: NodePoolsReady
+    - lastTransitionTime: "2022-04-08T08:01:23Z"
+      message: 0/1 Control Plane Node(s) healthy. 0/1 Worker Node(s) healthy
+      reason: WaitingForNodesHealthy
+      severity: Info
+      status: "False"
+      type: NodesHealthy
+    - lastTransitionTime: "2022-04-08T08:03:25Z"
+      status: "True"
+      type: ProviderServiceAccountsReady
+    - lastTransitionTime: "2022-04-08T08:03:35Z"
+      status: "True"
+      type: RoleBindingSynced
+    - lastTransitionTime: "2022-04-08T08:03:33Z"
+      status: "True"
+      type: ServiceDiscoveryReady
+    - lastTransitionTime: "2022-04-08T08:03:30Z"
+      status: "True"
+      type: StorageClassSynced
+    - lastTransitionTime: "2022-04-08T08:03:27Z"
+      status: "True"
+      type: TanzuKubernetesReleaseCompatible
+    - lastTransitionTime: "2022-04-08T07:58:42Z"
+      reason: NoUpdates
+      status: "False"
+      type: UpdatesAvailable
+    phase: creating
+    totalWorkerReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
